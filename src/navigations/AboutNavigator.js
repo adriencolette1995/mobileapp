@@ -4,33 +4,19 @@ import React from 'react';
 import HomeScreen from '../Screens/HomeScreen'
 import DetailScreen from '../Screens/DetailScreen'
 import AboutScreen from '../Screens/AboutScreen'
-import { BottomTabStack } from './BottomTabNavigator';
-
 
 //v5
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
+const Stack = createStackNavigator();
 
-   const Stack = createNativeStackNavigator();
+export default function AboutStackScreen() {
+  return (
+    <Stack.Navigator initialRouteName="About" screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="About" component={AboutScreen} />
+      <Stack.Screen name="Detail" component={DetailScreen} />
+      <Stack.Screen name="Home" component={HomeScreen} />
+    </Stack.Navigator>
 
-    export const AboutStack = () => {
-        return (
-            <Stack.Navigator initialRouteName="About">
-                 <Stack.screen
-                  name="About"
-                  component={AboutScreen}
-                  options={{ headerTitle: 'About'}}
-                />
-                <Stack.screen
-                 name="Detail"
-                 component={DetailScreen}
-                 options={{ headerTitle: 'Detail'}}
-                />
-                <Stack.screen
-                  name="Home"
-                  component={HomeScreen}
-                  options={{ headerTitle: 'Home'}}
-                />
-            </Stack.Navigator>
-        );
-    };
+  );
+}

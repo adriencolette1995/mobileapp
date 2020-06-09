@@ -13,7 +13,7 @@
     "splash": {
       "image": "./src/assets/logo_couleur.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffe4c4ù"
+      "backgroundColor": "#ffe4c4"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
