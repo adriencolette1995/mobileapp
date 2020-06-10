@@ -27,23 +27,6 @@ import DetailScreen from '../Screens/DetailScreen';
 import AboutScreen from '../Screens/AboutScreen';
 
 
-/* const ICON_SIZE = 22;
-
-    const focusableIoniconFactory = icon => {
-    
-      const focusedIcon = ({ focused }) => (
-		  <FontAwesomeIcon
-			icon={icon}
-			size={ICON_SIZE}
-			color={focused ? colors.primary : colors.secondary}
-		  />
-	  );
-
-	return focusedIcon;
-};
-
-*/
-
 const Tab = createMaterialBottomTabNavigator();
 
 
